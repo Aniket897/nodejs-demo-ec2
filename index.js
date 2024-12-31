@@ -21,6 +21,12 @@ app.get("/", (req, resp) => {
   });
 });
 
+app.get("/users", () => {
+  resp.status(200).json({
+    message: "List of users",
+  });
+});
+
 app.get("/health" , (req , resp) => {
   resp.status(200).json({
     message: "Server is up and running",
